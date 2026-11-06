@@ -1,0 +1,34 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "ai-interpreter"
+version = "0.1.0"
+description = "会议实时同声传译：双通道采集、实时字幕与录音落盘"
+readme = "README.md"
+requires-python = ">=3.9"
+dependencies = [
+    "PySide6>=6.5",
+    "sounddevice>=0.4.6",
+    "PyAudioWPatch>=0.2.12; sys_platform == 'win32'",
+    "websocket-client>=0.58,<2",
+    "numpy>=1.23",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7",
+    "pyflakes>=3",
+]
+
+[project.scripts]
+ai-interpreter = "ai_interpreter.app:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+testpaths = ["tests"]
+addopts = "-q"

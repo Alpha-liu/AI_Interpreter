@@ -1,0 +1,6 @@
+{
+  "api_key": "sk-ws-REPLACE_WITH_YOUR_API_KEY",
+  "workspace_id": "ws-f2u9w7cxffmu7t9h",
+  "model": "qwen3.8-livetranslate-flash-realtime",
+  "ws_url": "wss://ws-f2u9w7cxffmu7t9h.cn-beijing.maas.aliyuncs.com/api-ws/v1/realtime"
+}
